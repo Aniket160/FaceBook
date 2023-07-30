@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="css/signupstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="image/favicon.gif" type="image/x-icon">
+    <title>FaceBook</title>
+
+    
+</head>
+<body ng-app="myapp">
+  <div ng-controller="SignUp">
+    <section class="style1" >
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card style2" >
+          <div class="row">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="image/social2.jpg"
+                alt="login form" class="img-fluid style3"/>
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <form action="template/insert.php" id="form1" method="post">
+
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-1 style4" ></i>
+                    <span class="h1 fw-bold mb style5"><img src="image/fb.png" >FaceBook</span>
+                  </div>
+
+                  <h5 class="fw-normal mb-3 pb-3 style6" >Register your account</h5>
+                   <tr><p id="p0"></p><p id="link" class="hide">Please Login from Here<a href="index.html">Login</a></p></tr>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="firstname" name="firstname" class="form-control form-control-lg"
+                    ng-model="firstname" placeholder="First Name"  ng-class="{'error':first_name_valid_flag,'success':!first_name_valid_flag}" ng-change="validate1();"/>
+                    <p id="p1" ng-model="message" ng-class="{'correct':iscorrect,'incorrect':!iscorrect}" >{{message}}</p>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="lastname" name="lastname" class="form-control form-control-lg" 
+                    placeholder="Last Name" ng-model="lastname"  ng-class="{'error':last_name_valid_flag,'success':!last_name_valid_flag}" ng-change="validate2();"/>
+                    <p id="p2" ng-model="message1" ng-class="{'correct':iscorrect1,'incorrect':!iscorrect1}" >{{message1}}</p>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="number" id="age" name="age" class="form-control form-control-lg"
+                    placeholder="Age" ng-model="age" ng-class="{'error':age_valid_flag,'success':!age_valid_flag}" ng-change="validate3();" />
+                    <p id="p3"ng-model="message2" ng-class="{'correct':iscorrect2,'incorrect':!iscorrect2}" >{{message2}}</p>
+                  </div> 
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example17">Gender : </label>
+                    <input type="radio" name="gender"   value="Male">Male
+                    <input type="radio" name="gender"  value="Female">Female
+                    <input type="radio" name="gender"  value="Trans">Trans
+                    <p id="p4"></p>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="email" name="email" class="form-control form-control-lg"
+                    placeholder="Email" ng-model="email" ng-class="{'error':email_valid_flag,'success':!email_valid_flag}" ng-change="validate4();" />
+                    <p id="p5"ng-model="message3" ng-class="{'correct':iscorrect3,'incorrect':!iscorrect3}" >{{message3}}</p>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="mobile" name="mobile" class="form-control form-control-lg"
+                    placeholder="Mobile No" ng-model="mobile" ng-class="{'error':mobile_valid_flag,'success':!mobile_valid_flag}" ng-change="validate5();" />
+                    <p id="p6"ng-model="message4" ng-class="{'correct':iscorrect4,'incorrect':!iscorrect4}" >{{message4}}</p>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="user" name="username" class="form-control form-control-lg" 
+                    placeholder="Username" ng-model="username" ng-class="{'error':username_valid_flag,'success':!username_valid_flag}" ng-change="validate6();"/>
+                    <p id="p7"ng-model="message5" ng-class="{'correct':iscorrect5,'incorrect':!iscorrect5}" >{{message5}}</p>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="number" id="pincode" name="pincode"class="form-control form-control-lg" 
+                    placeholder="Pincode">
+                    <p id="p8"></p>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="password" id="password" name="password" class="form-control form-control-lg"
+                    placeholder="Password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                    title="Password should contain atleast one Alphabet , Atleast 1 number  and  minimum 8 length" />
+                    <p id="p9"></p>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="password" id="rpassword" name="rpassword" class="form-control form-control-lg"
+                    placeholder="Repeat Password" 
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                    title="Password should contain atleast one Alphabet , Atleast 1 number and minimum 8 length "/>
+                    <p id="p10"></p>
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-dark btn-lg btn-block"  type="submit">Sign Up</button>
+                  </div>
+
+                  <p class="mb-5 pb-lg-2 style7" >Already have an account <a
+                    class="style7" href="index.html">Login Here</a></p>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<script src="scripts/signupscript.js"></script>
+</body>
+<style>
+  
+
+</style>
+</html>

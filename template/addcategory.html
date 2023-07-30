@@ -1,0 +1,64 @@
+<body>
+    <h5 class="success">{{insertresponse[0]['message']}}<h5>
+        <h5 class="error">{{insertresponse[0]['error']}}<h5>
+    <!-- <h5>{{insertresponse}}<h5> -->
+    <div class="heading">
+        <i class="fas fa-cubes fa-2x me-1 style8" ></i>
+        <span class="h1 fw-bold mb style9"><img src="../image/fb.png" >FaceBook</span>
+    </div>
+    <form class="form1" enctype="multipart/form-data"method="post">
+    <input type="text" placeholder="Add Category"  name="category" ng-model="formData.categoryName" required="true">
+    <input class="file" name="file" id="file" type="file" required="true"> 
+    <button ng-click="upload()" class="btnsubmit" >Add Category</button>
+    <!-- <button ng-click="close()" class="btnclose" type="submit">close</button> -->
+</form>
+<style>
+    .heading
+    {
+        margin-left: 27%;
+        margin-top: 4%;
+    }
+.form1
+{
+    padding: 10%;
+    margin-left: 15%;
+}
+input
+{
+    padding: 7%;
+
+}
+.btnsubmit
+{
+    margin-left: -12%;
+    background-color: green;
+    color: white;
+    border-radius: 7%;
+    border: none;
+    padding: 2%;
+    width: 35%;
+}
+.btnclose
+{
+    /* position: absolute; */
+    background-color: red;
+    color: white;
+    border-radius: 7%;
+    border: none;
+    padding: 2%;
+    width: 28%;
+    height: 7%;
+    /* margin-top: -15%;
+    margin-left: 49%; */
+}
+.success
+{
+    color: green;
+}
+.error
+{
+    color: red;
+}
+</style>
+</body>
+

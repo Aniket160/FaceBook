@@ -1,0 +1,48 @@
+.test-css{
+    border-radius: 1rem 0 0 1rem;margin-top: 10%; height: 85%;
+}
+body
+{
+    /* overflow: hidden; */
+    background-size: cover;
+}
+.Error
+{
+  border-color: red;
+}
+.success
+{
+  border-color: green;
+}
+.no
+{
+  display: none;
+}
+.style1
+{
+    background-color: #E8E8E8;
+}
+.card
+{
+    border-radius: 1rem; margin-top: -2%;  height: 70%;
+}
+.style2
+{
+    border-radius: 1rem 0 0 1rem;margin-top: 10%; height: 85%;
+}
+.style3
+{
+    color: #ff6219;
+}
+.style4
+{
+    letter-spacing: 1px;
+}
+.style5
+{
+    color: #393f81;
+}
+.style6
+{
+    color: #393f81;
+}

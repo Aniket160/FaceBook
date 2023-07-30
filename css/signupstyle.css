@@ -1,0 +1,58 @@
+.correct
+{
+  color: green;
+}
+.incorrect
+{
+  color: red;
+}
+.hide
+{
+  display: none;
+}
+  body
+  {
+      /* overflow: hidden; */
+      background-size: cover;
+  }
+ .error
+ {
+  border-color: red;
+ }
+ .success
+ {
+  border-color: green;
+ }
+ .no
+ {
+  display: none;
+ }
+
+.style1
+{
+    background-color: #E8E8E8;
+}
+.style2
+{
+    border-radius: 1rem; margin-top: -2%;     height: 70%;
+}
+.style3
+{
+    border-radius: 1rem 0 0 1rem;margin-top: 10%; height: 85%;
+}
+.style4
+{
+    color: #ff6219;
+}
+.style5 img
+{
+    height:40px
+}
+.style6
+{
+    letter-spacing: 1px;
+}
+.style7
+{
+    color: #393f81;
+}

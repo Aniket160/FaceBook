@@ -1,0 +1,38 @@
+<div class="body">
+    <table>
+        <tr ng-repeat="follower in following1">
+            <td><img class="style1000" src="../facebook/{{follower['image']}}"></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="font">{{follower['first_name']}}</td>
+            <td class="font">{{follower['last_name']}}</td>
+        </tr>
+    </table>
+<table>
+    <tr><td width=5%><button class="btn" ng-click="ok()">Close</button></td></tr>
+</table>
+</div>
+<style>
+    .body
+    {
+        background-color: black;
+        color: white;
+    }
+    .style1000
+    {
+        height: 40px;
+        width: 20px;
+        margin: 10%;
+    }
+    .btn
+    {
+        margin-left: 39%;
+        color: white;
+        background-color: green;
+    }
+    .font
+    {
+        font-size: large;
+    }
+</style>

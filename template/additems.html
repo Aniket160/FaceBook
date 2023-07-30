@@ -1,0 +1,61 @@
+<body>
+    <div class="inventorydata">
+    <div class="inventory" ng-repeat="item in itemstodisplay ">
+        <button class="btn99" ><img src="{{item['image']}}">{{item['item_name']}}</button>
+       </div>
+       <div class="inventory">
+        <button class="btn99" onclick="additemdetails()">Add Item </button>
+       </div>
+    </div>
+    <div class="details" id="hide">
+        <form >
+            <input type="text" name="itemname" required>
+            <input type="file" name="itemfile" required >
+            <input type="hidden" name="categoryid"  value={{categoryid}}>
+            <input type="submit" class="btnadd" value="Add">
+        </form>
+    </div>
+
+    <style>
+        input
+        {
+            padding: 2%;
+        }
+        form
+        {
+            margin-left: 25%;
+            padding: 5%;
+        }
+        .details
+        {
+            display: none;
+        }
+        .active
+        {
+            display: block;
+        }
+    
+    .inventorydata
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .btnadd
+      {
+                margin-left: 15%;
+               height: 11%;
+               width: 30%;
+              color: white;
+               border-radius: 11%;
+               background-color: darkgreen;
+                border: none;
+      }
+    </style>
+    <script>
+        function additemdetails()
+        {
+            document.getElementById('hide').classList.toggle('active');
+        }
+    </script>
+</body>
